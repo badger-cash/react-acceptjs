@@ -367,7 +367,7 @@ var IFrameBackdrop = function (_a) {
 };
 var IFrame = function (_a) {
     var className = _a.className, style = _a.style;
-    return (jsxRuntime.jsx("iframe", { name: "iframeAuthorizeNet", id: "iframeAuthorizeNet", frameBorder: "0", scrolling: "no", width: "100%", height: "100%", className: className, style: className ? {} : style }));
+    return (jsxRuntime.jsx("iframe", { name: "iframeAuthorizeNet", id: "iframeAuthorizeNet", frameBorder: "0", width: "100%", height: "100%", className: className, style: className ? {} : style }));
 };
 
 var AcceptHosted = function (props) {
