@@ -58,7 +58,7 @@ export const IFrameIntegration = ({
   };
 
   const centerPopup = () => {
-    console.log('centering popup....');
+    // console.log('centering popup....');
     if (popupRef.current) {
       popupRef.current.style.left = '50%';
       popupRef.current.style.top = '50%';
@@ -66,7 +66,7 @@ export const IFrameIntegration = ({
       const top = -Math.floor(popupRef.current.clientHeight / 2);
       popupRef.current.style.marginLeft = `${left.toString()}px`;
       popupRef.current.style.marginTop = `${top.toString()}px`;
-      popupRef.current.style.zIndex = '2';
+      popupRef.current.style.zIndex = '4000';
       if (popupRef.current.offsetLeft < 16) {
         popupRef.current.style.left = '16px';
         popupRef.current.style.right = '16px';
@@ -170,8 +170,8 @@ export const IFrameContainer = ({
   style,
 }: CompoundComponentWithChildrenProps) => {
   const { popupIsShown, popupRef } = useIFrameIntegrationContext();
-  console.log('popupIsShown:', popupIsShown);
-  console.log('popupRef', popupRef);
+  // console.log('popupIsShown:', popupIsShown);
+  // console.log('popupRef', popupRef);
   const windowSize = useWindowSize();
   const [offsetWidth, setOffsetWidth] = React.useState(0);
   const [offsetHeight, setOffsetHeight] = React.useState(0);
@@ -183,7 +183,7 @@ export const IFrameContainer = ({
   // }, [popupIsShown]);
 
   React.useEffect(() => {
-    console.log('In useEffect...');
+    // console.log('In useEffect...');
     setOffsetWidth(Math.floor((popupRef.current?.clientWidth || 0) / 2));
     setOffsetHeight(Math.floor((popupRef.current?.clientHeight || 0) / 2));
   }, [popupRef]);
