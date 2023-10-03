@@ -144,6 +144,7 @@ export const IFrameIntegration = ({
 export const IFrameIntegrationButton = ({
   children,
   className,
+  style,
 }: CompoundComponentWithChildrenProps) => {
   const { postUrl, handleShowPopup, formToken, popupIsShown } =
     useIFrameIntegrationContext();
@@ -157,7 +158,7 @@ export const IFrameIntegrationButton = ({
       onSubmit={handleShowPopup}
     >
       <input type="hidden" id="popupToken" name="token" value={formToken} />
-      <button disabled={popupIsShown} className={className}>
+      <button disabled={popupIsShown} className={className} style={style}>
         {children}
       </button>
     </form>
@@ -243,7 +244,6 @@ export const IFrame = ({ className, style }: CompoundComponentCommonProps) => {
       name="iframeAuthorizeNet"
       id="iframeAuthorizeNet"
       frameBorder="0"
-      scrolling="no"
       width="100%"
       height="100%"
       className={className}

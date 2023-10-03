@@ -307,9 +307,9 @@ var IFrameIntegration = function (_a) {
     return (jsx(IFrameIntegrationContext.Provider, __assign({ value: contextValue }, { children: children })));
 };
 var IFrameIntegrationButton = function (_a) {
-    var children = _a.children, className = _a.className;
+    var children = _a.children, className = _a.className, style = _a.style;
     var _b = useIFrameIntegrationContext(), postUrl = _b.postUrl, handleShowPopup = _b.handleShowPopup, formToken = _b.formToken, popupIsShown = _b.popupIsShown;
-    return (jsxs("form", __assign({ method: "post", action: postUrl, id: "formAuthorizeNetPopup", name: "formAuthorizeNetPopup", target: "iframeAuthorizeNet", onSubmit: handleShowPopup }, { children: [jsx("input", { type: "hidden", id: "popupToken", name: "token", value: formToken }), jsx("button", __assign({ disabled: popupIsShown, className: className }, { children: children }))] })));
+    return (jsxs("form", __assign({ method: "post", action: postUrl, id: "formAuthorizeNetPopup", name: "formAuthorizeNetPopup", target: "iframeAuthorizeNet", onSubmit: handleShowPopup }, { children: [jsx("input", { type: "hidden", id: "popupToken", name: "token", value: formToken }), jsx("button", __assign({ disabled: popupIsShown, className: className, style: style }, { children: children }))] })));
 };
 var IFrameContainer = function (_a) {
     var children = _a.children, className = _a.className, style = _a.style;
